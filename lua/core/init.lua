@@ -1,3 +1,3 @@
-require("core.plugins")
-require("core.options")
 require("core.remap")
+require("core.lazy")
+require("core.options")
