@@ -10,6 +10,6 @@ return {
 		italic_comments = true,
 
 		-- Modern borderless telescope theme - also applies to fzf-lua
-		borderless_telescope = false,
+		borderless_telescope = true,
 	},
 }
