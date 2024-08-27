@@ -16,3 +16,5 @@ vim.keymap.set("n", "U", "<C-r>", { desc = "Redo" })
 --Uses gk/gj instead of j/k. But if there's a count (ex 4j) it uses j/k instead. (This helps with relative numbers as linebreak doesn't increase linecount)
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, noremap = true, desc = "Better down" })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, noremap = true, desc = "Better up" })
+
+vim.keymap.set("n", "M", "J", { desc = "Join lines" })
