@@ -3,7 +3,12 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
 vim.opt.undofile = true
+
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.scrolloff = 9
 
 vim.cmd("colorscheme cyberdream")
 
