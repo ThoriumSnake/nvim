@@ -5,18 +5,21 @@ return {
     config = function()
         local tsbuiltin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', tsbuiltin.find_files, {})
-        vim.keymap.set("n", "<C-p>", tsbuiltin.git_files, {})
-        vim.keymap.set('n', '<leader>fs', function ()
-            tsbuiltin.grep_string({ search = vim.fn.input("Grep > ") });
-        end)
+        vim.keymap.set("n", "<leader>fg", tsbuiltin.git_files, {})
+        vim.keymap.set('n', '<leader>fs', tsbuiltin.grep_string, {});
 
         require('telescope').setup({
+            -- pickers = {
+            --     find_files = {
+            --         hidden = true,
+            --     },
+            -- },
             defaults = {
                 layout_strategy = 'horizontal',
-                layout_config = { 
+                layout_config = {
                     --width = 0.8
                     preview_cutoff = 1,
-                    preview_width = 0.5,
+                    --preview_width = 0.5,
                 },
             },
         }
