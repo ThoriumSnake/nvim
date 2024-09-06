@@ -9,6 +9,10 @@ vim.opt.undofile = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.scrolloff = 9
+vim.opt.smoothscroll = true
+
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "both"
 
 vim.go.laststatus = 3
 
