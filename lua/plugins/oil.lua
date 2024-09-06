@@ -2,6 +2,7 @@ return {
 	{
 		'stevearc/oil.nvim',
 		enabled = true,
+        lazy = false,
 		opts = {
 			-- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
 			-- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -9,6 +10,14 @@ return {
 
 			-- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
 			delete_to_trash = true,
+
+            keymaps = {
+        ["<Space>"] = {
+            "actions.select",
+            mode = "n",
+            nowait = true,
+        },
+            },
 
 			view_options = {
 				-- Show files and directories that start with "."
