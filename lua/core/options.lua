@@ -1,4 +1,6 @@
+-- vim.cmd("colorscheme kanagawa-paper")
 vim.opt.fillchars = { eob = " " }
+
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.number = true
@@ -16,11 +18,16 @@ vim.opt.cursorlineopt = "both"
 
 vim.go.laststatus = 3
 
-vim.cmd("colorscheme cyberdream")
+-- vim.cmd("colorscheme habamax")
 
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#A05C7B', bold=true })
-vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#A05C7B', bold=true })
+--vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#FF8811'})
+--vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
+--vim.api.nvim_set_hl(0, 'LineNr', { fg='#FF8811', bold=true })
+--vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white', bold=true })
+
+--vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#A05C7B', bold=true })
+--vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
+--vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#A05C7B', bold=true })
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
