@@ -14,4 +14,23 @@ M.argv_contains = function(patterns)
 	return false
 end
 
+local function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
+M.dump = dump
+
+M.print_table = function(input)
+    print(dump(input))
+end
+
 return M
