@@ -1,7 +1,7 @@
--- vim.cmd("colorscheme kanagawa-paper")
+-- vim.cmd("SessionLoadLast")
 vim.opt.fillchars = { eob = " " }
 
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,7 +18,19 @@ vim.opt.cursorlineopt = "both"
 
 vim.go.laststatus = 3
 
--- vim.cmd("colorscheme habamax")
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
+
+vim.opt.cmdheight = 0
+vim.opt.signcolumn = "number"
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.smartindent = true
+
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 --vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#FF8811'})
 --vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
@@ -28,10 +40,3 @@ vim.go.laststatus = 3
 --vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#A05C7B', bold=true })
 --vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 --vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#A05C7B', bold=true })
-
-vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
-vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
-vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
-vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
-
-vim.opt.cmdheight = 0
