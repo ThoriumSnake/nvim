@@ -103,6 +103,27 @@ return {
                     -- No need to set `hybridMode` to `true` as it's the default value
                     -- lspconfig.volar.setup({})
                 end,
+
+                omnisharp_mono = function()
+                    local pid = vim.fn.getpid()
+                    local mason_registry = require("mason-registry")
+                    local omnisharp_bin = mason_registry.get_package("omnisharp-mono"):get_install_path()
+                        .. "/omnisharp-mono"
+
+                    require("lspconfig").omnisharp.setup({
+                        -- flags = {
+                        --     debounce_text_changes = 150,
+                        -- },
+                        cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+
+                        -- cmd = {
+                        --     "mono",
+                        --     "--assembly-loader=strict",
+                        --     omnisharp_bin,
+                        -- },
+                        use_mono = true,
+                    })
+                end,
             },
         })
     end,
