@@ -4,7 +4,7 @@ vim.opt.fillchars = { eob = " " }
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 vim.opt.undofile = true
 
