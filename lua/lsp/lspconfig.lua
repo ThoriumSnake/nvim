@@ -45,9 +45,18 @@ return {
             -- update_in_insert = true,
             severity_sort = true,
 
+            virtual_text = {
+                prefix = " 󰊠",
+            },
+
             float = {
                 focusable = false,
                 source = "always",
+                border = "rounded",
+                prefix = {
+                    "󰊠 ",
+                    "MiniIndentscopeSymbol",
+                },
                 header = "",
                 -- prefix = "",
                 severity_sort = true,
@@ -61,12 +70,12 @@ return {
                     [vim.diagnostic.severity.HINT] = "",
                 },
 
-                linehl = {
-                    [vim.diagnostic.severity.ERROR] = "DiagnosticErrorLn",
-                    [vim.diagnostic.severity.WARN] = "DiagnosticWarnLn",
-                    [vim.diagnostic.severity.INFO] = "DiagnosticInfoLn",
-                    [vim.diagnostic.severity.HINT] = "DiagnosticHintLn",
-                },
+                -- linehl = {
+                --     [vim.diagnostic.severity.ERROR] = "DiagnosticErrorLn",
+                --     [vim.diagnostic.severity.WARN] = "DiagnosticWarnLn",
+                --     [vim.diagnostic.severity.INFO] = "DiagnosticInfoLn",
+                --     [vim.diagnostic.severity.HINT] = "DiagnosticHintLn",
+                -- },
             },
         })
 
