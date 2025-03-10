@@ -13,6 +13,11 @@ return {
                 { "/", exact = true },
                 { "/tmp", exact = true },
                 { "~", exact = true },
+                { "~/Desktop", exact = true },
+                "/run/media",
+                "~/.local/share/Steam",
+                "~/.cache",
+                "~/Vaults",
             },
         })
         require("telescope").load_extension("persisted")

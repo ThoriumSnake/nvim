@@ -44,7 +44,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete and put in b
 vim.keymap.set("n", "<leader>s", [[:%s/]])
 
 ---- OPEN CONFIG ----
-vim.keymap.set("n", "<leader>co", "<CMD>cd ~/.config/nvim/<CR><CMD>edit .<CR>")
+-- vim.keymap.set("n", "<leader>co", "<CMD>cd ~/.config/nvim/<CR><CMD>edit .<CR>")
 
 ---- MOVEMENT ----
 vim.keymap.set({ "n", "v" }, "H", "g^")
@@ -69,7 +69,7 @@ vim.keymap.set({ "n", "v" }, ">", ">>")
 
 ---- WINDOW MOVEMENT ----
 --ctrl + j ctrl + k ctrl + h, etc
-vim.keymap.set({ "n", "v" }, "<Space><Space>", "<C-w>w")
+-- vim.keymap.set({ "n", "v" }, "<Space><Space>", "<C-w>w")
 vim.keymap.set({ "n", "v" }, "<Space>h", "<C-w>h")
 vim.keymap.set({ "n", "v" }, "<Space>j", "<C-w>j")
 vim.keymap.set({ "n", "v" }, "<Space>k", "<C-w>k")

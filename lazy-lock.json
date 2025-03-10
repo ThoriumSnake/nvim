@@ -6,11 +6,12 @@
   "cyberdream.nvim": { "branch": "main", "commit": "10d79f367abd585626aca5099907df67e4dfd7a6" },
   "edge": { "branch": "master", "commit": "3dcbdbd6942018bb30ddfbe9b99e3295ea8c7f0f" },
   "everforest": { "branch": "master", "commit": "93b89630861a4c8a1be07bc54f6d53487acb2e57" },
+  "eyeliner.nvim": { "branch": "main", "commit": "8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6" },
   "fidget.nvim": { "branch": "main", "commit": "d855eed8a06531a7e8fd0684889b2943f373c469" },
-  "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
   "flow.nvim": { "branch": "main", "commit": "3af4d4d1b8a99c34e060de6fdaa5babc596a50c1" },
   "fluoromachine.nvim": { "branch": "main", "commit": "d638ea221b4c6636978f49c1987d10ff2733c23d" },
   "gruvbox-material": { "branch": "master", "commit": "559b4a9abb6781699404dfd98fb7d6ec83113337" },
+  "hop.nvim": { "branch": "master", "commit": "08ddca799089ab96a6d1763db0b8adc5320bf050" },
   "incline.nvim": { "branch": "main", "commit": "16fc9c073e3ea4175b66ad94375df6d73fc114c0" },
   "indent-blankline.nvim": { "branch": "master", "commit": "18603eb949eba08300799f64027af11ef922283f" },
   "kanagawa-paper.nvim": { "branch": "master", "commit": "e7eb180bfd776fe41dba613fe19fbc6ff7229484" },
@@ -43,10 +44,10 @@
   "sonokai": { "branch": "master", "commit": "a9d4d398999b5f74a6dfe3af400f824e2cbddf6f" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "themery.nvim": { "branch": "main", "commit": "834d9bd81ddcaabbcba1cc51827455e9652a9d97" },
-  "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "90610e55f438d833c052867d022ff11f27647210" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "tokyodark.nvim": { "branch": "master", "commit": "14bc1b3e596878a10647af7c82de7736300f3322" },
   "tokyonight.nvim": { "branch": "main", "commit": "4b386e66a9599057587c30538d5e6192e3d1c181" },
   "treesj": { "branch": "main", "commit": "0d81326b5afd36babe7dd480aabbb0b05f33e688" },
-  "undotree": { "branch": "master", "commit": "56c684a805fe948936cda0d1b19505b84ad7e065" }
+  "undotree": { "branch": "master", "commit": "56c684a805fe948936cda0d1b19505b84ad7e065" },
+  "window-picker": { "branch": "main", "commit": "41cfaa428577c53552200a404ae9b3a0b5719706" }
 }

@@ -6,17 +6,26 @@ return {
     config = function()
         require("lualine").setup({
 
-            -- options = {
-            --     globastatus = true,
-            -- },
+            options = {
+                -- globastatus = true,
+                component_separators = { left = "", right = "" },
+                section_separators = { left = "", right = "" },
+            },
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch", "diff", "diagnostics" },
                 -- lualine_c = { require("grapple-line").lualine },
                 -- lualine_c = { "grapple" },
                 lualine_c = {
-                    { "searchcount", maxcount = 999999, timeout = 500 },
-                    { "selectioncount" },
+                    {
+                        "filename",
+                        symbols = {
+                            modified = "󰛓󰛓󰛓", -- Text to show when the file is modified.
+                            readonly = "[readonly]", -- Text to show when the file is non-modifiable or readonly.
+                            unnamed = "[No File]", -- Text to show for unnamed buffers.
+                            newfile = "[New]", -- Text to show for newly created file before first write
+                        },
+                    },
                 },
 
                 -- lualine_x = {
@@ -33,15 +42,8 @@ return {
                 --     },
                 -- },
                 lualine_x = {
-                    {
-                        "filename",
-                        symbols = {
-                            modified = "󰛓󰛓󰛓", -- Text to show when the file is modified.
-                            readonly = "[readonly]", -- Text to show when the file is non-modifiable or readonly.
-                            unnamed = "[No File]", -- Text to show for unnamed buffers.
-                            newfile = "[New]", -- Text to show for newly created file before first write
-                        },
-                    },
+                    { "searchcount", maxcount = 999999, timeout = 500 },
+                    { "selectioncount" },
                 },
                 lualine_y = {
                     '" "..tostring(vim.api.nvim_win_get_cursor(0)[1]).."/"..tostring( vim.api.nvim_buf_line_count(0) )',
@@ -50,7 +52,7 @@ return {
             },
 
             inactive_sections = {
-                lualine_x = {},
+                -- lualine_x = {},
             },
 
             -- extensions = { "oil", }

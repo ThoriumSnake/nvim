@@ -1,20 +1,20 @@
 --Alternatively swap the file in alt/ to use nvim-web-devicons, that plugin seems more reliable with incline/different color schemes
 return {
-    'b0o/incline.nvim',
+    "b0o/incline.nvim",
     -- Optional: Lazy load Incline
     -- lazy = false,
     -- event = 'VeryLazy',
     dependencies = { "echasnovski/mini.icons" },
 
     config = function()
-        local helpers = require('incline.helpers')
+        local helpers = require("incline.helpers")
         -- local devicons = require('nvim-web-devicons')
-        local mini_icons = require('mini.icons')
+        local mini_icons = require("mini.icons")
 
-        require('incline').setup({
+        require("incline").setup({
             window = {
                 padding = 0,
-                margin = { horizontal = 0, vertical = 0, },
+                margin = { horizontal = 0, vertical = 0 },
                 -- overlap = {
                 --     borders = true,
                 --     winbar = true,
@@ -31,7 +31,7 @@ return {
                 local full_path = vim.api.nvim_buf_get_name(props.buf)
                 --Comparing to 1 to check if pattern is at start of string
                 local oil = string.find(full_path, "oil://", 1, true) == 1
-                local filename = vim.fn.fnamemodify(full_path, ':t')
+                local filename = vim.fn.fnamemodify(full_path, ":t")
 
                 --Using full path instead of filename as it avoids errors with oil
                 local ft_icon, hl_name, is_default_color = mini_icons.get("file", full_path)
@@ -47,10 +47,10 @@ return {
                 end
 
                 local modified = vim.bo[props.buf].modified
-                local modified_symbol = modified and ' 󰛓󰛓󰛓' or ''
+                local modified_symbol = modified and " 󰛓󰛓󰛓" or ""
 
-                if filename == '' then
-                    filename = '[Untitled]'
+                if filename == "" then
+                    filename = "[Untitled]"
                 end
                 if oil then
                     --7 is start of actual path without "oil://"
@@ -59,11 +59,11 @@ return {
                 end
 
                 return {
-                    ft_icon and { ' ', ft_icon, ' ', guibg = ft_color, guifg = helpers.contrast_color(ft_color) } or '',
-                    ' ',
-                    { filename .. modified_symbol, gui = modified and 'bold,italic' or 'bold' },
-                    ' ',
-                    guibg = '#44406e',
+                    ft_icon and { " ", ft_icon, " ", guibg = ft_color, guifg = helpers.contrast_color(ft_color) } or "",
+                    " ",
+                    { filename .. modified_symbol, gui = modified and "bold,italic" or "bold" },
+                    " ",
+                    guibg = "#44406e",
                 }
             end,
         })
