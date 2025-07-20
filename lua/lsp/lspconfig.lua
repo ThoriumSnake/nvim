@@ -135,5 +135,18 @@ return {
                 end,
             },
         })
+
+        -- require("lspconfig").gdscript.setup({
+        --     cmd = { "ncat", "localhost", "6005" },
+        --     root_dir = function()
+        --         return vim.fs.dirname(vim.fs.find("project.godot", { upward = true })[1])
+        --     end,
+        -- })
+        require("lspconfig").gdscript.setup({
+            -- cmd = { "ncat", "localhost", "6005" },
+            -- root_dir = function()
+            --     return vim.fs.dirname(vim.fs.find("project.godot", { upward = true })[1])
+            -- end,
+        })
     end,
 }
