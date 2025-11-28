@@ -13,9 +13,16 @@ vim.keymap.set("n", "<C-r>", "U", { desc = "Undo line" })
 vim.keymap.set(
     "n",
     "<Tab>",
-    "i<Cmd>lua require('cmp').complete()<CR>",
-    { desc = "Open nvim-cmp completion menu from normal mode" }
+    "i<Cmd>lua require('blink.cmp').show_and_insert()<CR>",
+    { desc = "Open blink.cmp completion menu from normal mode" }
 )
+
+-- vim.keymap.set(
+--     "n",
+--     "<Tab>",
+--     "i<Cmd>lua require('cmp').complete()<CR>",
+--     { desc = "Open nvim-cmp completion menu from normal mode" }
+-- )
 
 -- vim.keymap.set("i", "<Tab>", function()
 --     local cmp = require("cmp")
@@ -49,6 +56,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/]])
 ---- MOVEMENT ----
 vim.keymap.set({ "n", "v" }, "H", "g^")
 vim.keymap.set({ "n", "v" }, "L", "g$")
+
+vim.keymap.set({ "n", "v" }, "M", "`")
 
 --Uses gk/gj instead of j/k. But if there's a count (ex 4j) it uses j/k instead. (This helps with relative numbers as linebreak doesn't increase linecount)
 vim.keymap.set({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, noremap = true, desc = "Better down" })

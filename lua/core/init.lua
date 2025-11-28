@@ -6,5 +6,8 @@ require("core.neovide-options")
 require("core.mode-recolor")
 require("core.highlights")
 require("core.gdscript")
+require("lsp.lsp")
 -- require("core.grapple-line")
 -- require("core.autocwd")
+
+require("utils.treesitter")

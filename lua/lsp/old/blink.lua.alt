@@ -1,0 +1,46 @@
+local has_words_before = function()
+    local col = vim.api.nvim_win_get_cursor(0)[2]
+    if col == 0 then
+        return false
+    end
+    local line = vim.api.nvim_get_current_line()
+    return line:sub(col, col):match("%s") == nil
+end
+
+return {
+    "saghen/blink.cmp",
+    -- optional: provides snippets for the snippet source
+    dependencies = { "rafamadriz/friendly-snippets" },
+
+    -- use a release tag to download pre-built binaries
+    version = "1.*",
+    -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+    -- build = 'cargo build --release',
+    -- If you use nix, you can build from source using latest nightly rust with:
+    -- build = 'nix run .#build-plugin',
+
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    -- opts = {
+    -- keymap = {
+    --     preset = "none",
+    --
+    --     -- If completion hasn't been triggered yet, insert the first suggestion; if it has, cycle to the next suggestion.
+    --     ["<C-space>"] = {
+    --         function(cmp)
+    --             if has_words_before() then
+    --                 return cmp.insert_next()
+    --             end
+    --         end,
+    --         "fallback",
+    --     },
+    --     -- Navigate to the previous suggestion or cancel completion if currently on the first one.
+    --     ["<S-Tab>"] = { "insert_prev" },
+    -- },
+    -- completion = {
+    --     menu = { enabled = false },
+    --     list = { selection = { preselect = false }, cycle = { from_top = false } },
+    -- },
+    -- },
+    opts_extend = { "sources.default" },
+}

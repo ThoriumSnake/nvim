@@ -13,10 +13,9 @@ return {
             },
             sections = {
                 lualine_a = { "mode" },
-                lualine_b = { "branch", "diff", "diagnostics" },
                 -- lualine_c = { require("grapple-line").lualine },
                 -- lualine_c = { "grapple" },
-                lualine_c = {
+                lualine_b = {
                     {
                         "filename",
                         symbols = {
@@ -27,6 +26,7 @@ return {
                         },
                     },
                 },
+                lualine_c = { "branch", "diff", "diagnostics" },
 
                 -- lualine_x = {
                 --     {
@@ -55,7 +55,7 @@ return {
                 -- lualine_x = {},
             },
 
-            -- extensions = { "oil", }
+            extensions = { "oil" },
         })
     end,
 }

@@ -15,41 +15,22 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
---Setup lazy.nvim
-if vim.g.vscode then
-    require("lazy").setup({
-        spec = {
-            --NOTE No clue whether this is related to loading order. It PROBABLY joins the lists of plugins and uses the set priority for it.
-            -- { import = "plugins.colorschemes" },
-            -- { import = "plugins" },
-            -- { import = "plugins.misc" },
-            -- { import = "lsp" },
-        },
+require("lazy").setup({
+    spec = {
+        --NOTE No clue whether this is related to loading order. It PROBABLY joins the lists of plugins and uses the set priority for it.
+        { "mason-org/mason.nvim", dependencies = { "neovim/nvim-lspconfig" }, opts = {} },
+        { import = "plugins.colorschemes" },
+        { import = "plugins" },
+        { import = "plugins.misc" },
+        { import = "lsp.blink" },
+        -- { import = "lsp" },
+    },
 
-        ui = {
-            border = "rounded",
-        },
+    ui = {
+        border = "rounded",
+    },
 
-        change_detection = {
-            notify = false,
-        },
-    })
-else
-    require("lazy").setup({
-        spec = {
-            --NOTE No clue whether this is related to loading order. It PROBABLY joins the lists of plugins and uses the set priority for it.
-            { import = "plugins.colorschemes" },
-            { import = "plugins" },
-            { import = "plugins.misc" },
-            { import = "lsp" },
-        },
-
-        ui = {
-            border = "rounded",
-        },
-
-        change_detection = {
-            notify = false,
-        },
-    })
-end
+    change_detection = {
+        notify = false,
+    },
+})

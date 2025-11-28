@@ -4,6 +4,7 @@ return {
     -- Optional: Lazy load Incline
     -- lazy = false,
     -- event = 'VeryLazy',
+    enabled = false,
     dependencies = { "echasnovski/mini.icons" },
 
     config = function()
