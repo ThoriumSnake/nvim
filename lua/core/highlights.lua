@@ -16,6 +16,8 @@ vim.api.nvim_set_hl(0, "DiagnosticErrorLn", { bg = blend_error })
 vim.api.nvim_set_hl(0, "DiagnosticWarnLn", { bg = blend_warn })
 vim.api.nvim_set_hl(0, "DiagnosticInfoLn", { bg = blend_info })
 vim.api.nvim_set_hl(0, "DiagnosticHintLn", { bg = blend_hint })
+vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#7ec49d", bg = "NvimDarkGreen", ctermfg = 0, ctermbg = 10 })
+vim.api.nvim_set_hl(0, "DiffDelete", { fg = "#ff7da3", cterm = { bold = true }, ctermfg = 9, bold = true })
 
 -- local indent = vim.api.nvim_get_hl(0, {name = "MiniIndentscopeSymbol"}).fg
 -- vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = indent == "#ffffff" and "#00a5c5a" or indent })

@@ -1,4 +1,10 @@
-vim.o.guifont = "JetBrainsMonoNL Nerd Font:h10"
+vim.o.guifont = "JetBrainsMonoNL Nerd Font:h11"
+
+if vim.g.neovide then
+    vim.g.neovide_window_blurred = true
+    vim.g.neovide_opacity = 0.8
+    vim.g.neovide_normal_opacity = 0.8
+end
 
 -- Reset the font size when leaving Oil
 --vim.api.nvim_create_autocmd("BufEnter", {

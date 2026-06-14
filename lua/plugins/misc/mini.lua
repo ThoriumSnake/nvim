@@ -23,16 +23,27 @@ return {
                     -- Module mappings. Use `''` (empty string) to disable one.
                     mappings = {
                         -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-                        left = "<A-h>",
-                        right = "<A-l>",
-                        down = "<A-j>",
-                        up = "<A-k>",
+                        -- left = "<A-h>",
+                        -- right = "<A-l>",
+                        -- down = "<A-j>",
+                        -- up = "<A-k>",
+                        --
+                        -- -- Move current line in Normal mode
+                        -- line_left = "<A-h>",
+                        -- line_right = "<A-l>",
+                        -- line_down = "<A-j>",
+                        -- line_up = "<A-k>",
 
-                        -- Move current line in Normal mode
-                        line_left = "<A-h>",
-                        line_right = "<A-l>",
-                        line_down = "<A-j>",
-                        line_up = "<A-k>",
+                        -- left = "left",
+                        -- right = "right",
+                        -- down = "down",
+                        -- up = "up",
+                        --
+                        -- -- Move current line in Normal mode
+                        -- line_left = "left",
+                        -- line_right = "right",
+                        -- line_down = "down",
+                        -- line_up = "up",
                     },
                 },
             })
@@ -43,7 +54,16 @@ return {
         "echasnovski/mini.surround",
         version = false,
         config = function()
-            require("mini.surround").setup()
+            require("mini.surround").setup({
+                mappings = {
+                    add = "sa", -- Add surrounding in Normal and Visual modes
+                    delete = "sd", -- Delete surrounding
+                    find = "sf", -- Find surrounding (to the right)
+                    find_left = "sF", -- Find surrounding (to the left)
+                    highlight = "sh", -- Highlight surrounding
+                    replace = "sr",
+                },
+            })
         end,
     },
 }

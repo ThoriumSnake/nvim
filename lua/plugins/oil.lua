@@ -1,9 +1,20 @@
 return {
     {
+        "refractalize/oil-git-status.nvim",
+        dependencies = {
+            "stevearc/oil.nvim",
+        },
+        lazy = false,
+        config = true,
+    },
+    {
         "stevearc/oil.nvim",
         -- enabled = false,
         lazy = false,
         opts = {
+            win_options = {
+                signcolumn = "yes:2",
+            },
             -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
             -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
             default_file_explorer = true,

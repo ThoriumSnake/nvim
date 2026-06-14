@@ -58,15 +58,18 @@ return {
                 end,
                 "fallback",
             },
-            ["<Esc>"] = {
-                function(cmp)
-                    vim.cmd("stopinsert")
-                    return cmp.hide()
-                end,
-                "fallback",
-            },
+            -- ["<Esc>"] = {
+            --     function(cmp)
+            --         cmp.cancel()
+            --         -- vim.cmd("stopinsert")
+            --         return false
+            --     end,
+            --     "fallback",
+            -- },
             ["<Space>"] = { "accept", "fallback" },
-            -- ["<Esc>"] = { "cancel", "fallback" },
+            ["<Esc>"] = { "cancel", "fallback" },
+            -- ["<C-k>"] = { "select_prev", "fallback_to_mappings" },
+            -- ["<C-j>"] = { "select_next", "fallback_to_mappings" },
         },
 
         appearance = {

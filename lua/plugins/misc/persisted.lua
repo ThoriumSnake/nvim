@@ -22,8 +22,8 @@ return {
 
             allowed_dirs = allowed_dirs,
 
-            -- ignored_dirs = {
-            --     { "/", exact = true },
+            ignored_dirs = {
+                { "/", exact = true },
             --     { "/tmp", exact = true },
             --     { "~", exact = true },
             --     { "~/Desktop", exact = true },
@@ -31,7 +31,7 @@ return {
             --     "~/.local/share/Steam",
             --     "~/.cache",
             --     "~/Vaults",
-            -- },
+            },
         })
         require("telescope").load_extension("persisted")
 
