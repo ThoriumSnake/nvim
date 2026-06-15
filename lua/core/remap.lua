@@ -39,8 +39,8 @@ vim.keymap.set({ "n", "v" }, "$", "g$", { noremap = true })
 vim.keymap.set({ "n", "v" }, "^", "g^", { noremap = true })
 vim.keymap.set({ "n", "v" }, "0", "g0", { noremap = true })
 
-vim.keymap.set({ "n", "v" }, "M", "m")
-vim.keymap.set({ "n", "v" }, "m", "`")
+vim.keymap.set({ "n", "v" }, "M", "`")
+-- vim.keymap.set({ "n", "v" }, "m", "`")
 
 --Uses gk/gj instead of j/k. But if there's a count (ex 4j) it uses j/k instead. (This helps with relative numbers as linebreak doesn't increase linecount)
 vim.keymap.set({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, noremap = true, desc = "Better down" })
