@@ -22,6 +22,11 @@ vim.lsp.config("vtsls", vue_config.vtsls_config)
 vim.lsp.config("ts_ls", vue_config.ts_ls_config)
 vim.lsp.enable({ "ts_ls", "vue_ls" })
 
+local gdscript_config = require("lsp.gdscript")
+
+vim.lsp.config("gdscript", gdscript_config)
+vim.lsp.enable("gdscript")
+
 vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>")
 -- vim.keymap.set("n", "`d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
 -- vim.keymap.set("n", "+d", "<cmd>lua vim.diagnostic.goto_next()<cr>")
