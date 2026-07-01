@@ -4,7 +4,8 @@ return {
     enabled = true,
     config = function()
         --Configuration MUST be done this way, idk if this is a bug in treesitter, but otherwise configuration will not apply
-        require("nvim-treesitter.configs").setup({
+        -- require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter").setup({
             -- A list of parser names, or "all" (the listed parsers MUST always be installed)
             ensure_installed = {
                 "c",
